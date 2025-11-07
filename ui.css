@@ -28,47 +28,38 @@ aside a.router-link-active, aside a.exact-active{
   line-height: 1;                  /* tą patį aukštį */
 }
 
-/* Pakeičia viršutinį puslapio heading "Opportunities" į "Internal Feedback" */
-.topmenu-navtitle[role="heading"][aria-level="1"] {
-  visibility: hidden !important;   /* paslepiame tik tekstą */
-  position: relative;
-}
-
-.topmenu-navtitle[role="heading"][aria-level="1"]::after {
-  content: "Internal Feedback";
-  visibility: visible;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 600;
-  color: inherit;        /* naudoja tokią pačią spalvą kaip originalus */
-}
 
 
-/* ***** Replace tab title "Opportunities" → "Internal Feedback" ***** */
+/* --- Replace "Opportunities" tab title → "Internal Feedback" --- */
 
-/* Pasiliekam visą tab struktūrą, bet paslepiam originalų tekstą */
+/* Paslepiame originalų tekstą, bet paliekame tab struktūrą */
 #tb_opportunities-tab {
   position: relative !important;
-  color: transparent !important;       /* tekstas tampa nematomas, bet vieta išlieka */
+  color: transparent !important;
+  white-space: nowrap !important; /* neleisti sulaužyti teksto */
 }
 
-/* Iš naujo uždedame tekstą */
+/* Įdedame naują tekstą vienoje linijoje */
 #tb_opportunities-tab::after {
   content: "Internal Feedback";
-  color: #1f1f1f !important;           /* standartinė UI juoda/pilka highlevel’o */
+  color: #1f1f1f !important;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  inset: 0; /* shorthand už left, right, top, bottom */
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  pointer-events: none;                /* kad nenutrūktų click’as */
-  white-space: nowrap;                 /* NE leidžiame tekstui išsidalyti į dvi eilutes */
+  pointer-events: none;
+  white-space: nowrap !important;
 }
+
+/* Labai svarbu — suteikiame daugiau vietos tab'ui */
+#tb_opportunities-tab {
+  min-width: 175px !important;   /* čia gali reguliuoti */
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
 
 
 /* Power Dialer (žalias su rageliu) */ header button[aria-label*="Power Dialer"], header [role="button"][aria-label*="Power Dialer"] { display: none !important; } /* „What's New“ / naujienos */ header button[aria-label*="What"], header [role="button"][aria-label*="What"] { display: none !important; } /* Help / Support (klaustukas) */ header button[aria-label*="Help"], header [role="button"][aria-label*="Help"] { display: none !important; } /* View Changelog / pakeitimai highlevel notifs */ header button[aria-label*="View Changelog"], header [role="button"][aria-label*="View Changelog"] { display: none !important; } /* Paslepia šoninį AI Agents mygtuką */ a[id="sb_AI Agents"] { display: none !important; } div#globalSearchOpener, #globalSearchOpener * { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; } #sb_reporting { display: none; } #sb_email-marketing { display: none; } a#67d04f019b961eb53460bcdc { display: none; } #sb_automation { display: none; } #sb_launchpad { display: none; } #sb_payments { display: none; } #sb_dashboard { display: none; } #sb_conversations { display: none; } #sb_calendars { display: none; } #sb_sites { display: none; } #tb_reputations-requests { display: none; } #tb_quiz-builder { display: none; } #tb_online-listings { display: none; } #sb_memberships { display: none; } #sb_app-marketplace { display: none; } #reputation-yext-overview-card { display: none; } #sb_objects { display: none; } #sb_agency-dashboard { display: none; } #sb_whatsapp { display: none; } #sb_ai_agent_settings { display: none; } #sb_Opportunities-Pipelines { display: none; } #sb_undefined { display: none; } #sb_conversations_providers { display: none; } #sb_brand-boards { display: none; } #tb_manial-actions { display: none; } #pendo-base { display: none; } #pendo-g-5XkyCm3qauAbDY5lupfi7SwX1wA { display: none; } #sb_business-settings-v2 { display: none; } #sb_labs { display: none; } #sb_url-redirects { display: none; } #sb_manage-scoring { display: none; } #sb_reputation-management { display: none; }
