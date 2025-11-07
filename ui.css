@@ -28,17 +28,20 @@ aside a.router-link-active, aside a.exact-active{
   line-height: 1;                  /* tą patį aukštį */
 }
 
-/* 1) Puslapio viršuje esantis heading "Opportunities" → "Internal Feedback" */
-.topmenu-navtitle:contains("Opportunities") {
-  visibility: hidden !important;
+/* Pakeičia viršutinį puslapio heading "Opportunities" į "Internal Feedback" */
+.topmenu-navtitle[role="heading"][aria-level="1"] {
+  visibility: hidden !important;   /* paslepiame tik tekstą */
+  position: relative;
 }
 
-.topmenu-navtitle:contains("Opportunities")::after {
+.topmenu-navtitle[role="heading"][aria-level="1"]::after {
   content: "Internal Feedback";
-  visibility: visible !important;
-  display: inline-block;
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  top: 0;
   font-weight: 600;
-  color: inherit;
+  color: inherit;        /* naudoja tokią pačią spalvą kaip originalus */
 }
 
 
