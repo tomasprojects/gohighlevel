@@ -11,3 +11,29 @@ aside a.router-link-active, aside a.exact-active{
 
 
 /* Power Dialer (žalias su rageliu) */ header button[aria-label*="Power Dialer"], header [role="button"][aria-label*="Power Dialer"] { display: none !important; } /* „What's New“ / naujienos */ header button[aria-label*="What"], header [role="button"][aria-label*="What"] { display: none !important; } /* Help / Support (klaustukas) */ header button[aria-label*="Help"], header [role="button"][aria-label*="Help"] { display: none !important; } /* View Changelog / pakeitimai highlevel notifs */ header button[aria-label*="View Changelog"], header [role="button"][aria-label*="View Changelog"] { display: none !important; } /* Paslepia šoninį AI Agents mygtuką */ a[id="sb_AI Agents"] { display: none !important; } div#globalSearchOpener, #globalSearchOpener * { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; } #sb_reporting { display: none; } #sb_email-marketing { display: none; } a#67d04f019b961eb53460bcdc { display: none; } #sb_automation { display: none; } #sb_launchpad { display: none; } #sb_payments { display: none; } #sb_dashboard { display: none; } #sb_conversations { display: none; } #sb_calendars { display: none; } #sb_sites { display: none; } #tb_reputations-requests { display: none; } #tb_quiz-builder { display: none; } #tb_online-listings { display: none; } #sb_memberships { display: none; } #sb_app-marketplace { display: none; } #reputation-yext-overview-card { display: none; } #sb_objects { display: none; } #sb_agency-dashboard { display: none; } #sb_whatsapp { display: none; } #sb_ai_agent_settings { display: none; } #sb_Opportunities-Pipelines { display: none; } #sb_undefined { display: none; } #sb_conversations_providers { display: none; } #sb_brand-boards { display: none; } #tb_manial-actions { display: none; } #pendo-base { display: none; } #pendo-g-5XkyCm3qauAbDY5lupfi7SwX1wA { display: none; } #sb_business-settings-v2 { display: none; } #sb_labs { display: none; } #sb_url-redirects { display: none; } #sb_manage-scoring { display: none; } #sb_reputation-management { display: none; }
+
+/* ==== Left nav: rename Opportunities → Internal Feedback ==== */
+/* paslepiame tikrą tekstą */
+#sb_opportunities a span,
+#sb_opportunities a .ghl-nav__txt,
+#sb_opportunities .sidebar-item__label {
+  color: transparent !important;
+  position: relative;
+}
+
+/* įrašome naują */
+#sb_opportunities a span::after,
+#sb_opportunities a .ghl-nav__txt::after,
+#sb_opportunities .sidebar-item__label::after {
+  content: "Internal Feedback";
+  color: var(--g5s-text, #202124) !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* aktyvios būsenos spalva */
+#sb_opportunities a.router-link-active span::after,
+#sb_opportunities a.router-link-active .ghl-nav__txt::after {
+  color: var(--g5s-blue, #1A73E8) !important;
+}
