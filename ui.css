@@ -67,3 +67,21 @@ aside a.router-link-active, aside a.exact-active{
 body:has(#tb_opportunities-tab.router-link-active) .pipeline-ribbon {
   display: none !important;
 }
+
+/* --- Hide top tabs we don't need --- */
+#tb_pipeline,
+#tb_bulk-actions {
+  display: none !important;
+}
+
+/* --- Hide pipeline mode ribbon bar --- */
+.pipeline-ribbon {
+  display: none !important;
+}
+
+/* --- Hide search/filter bar inside Opportunities --- */
+.d-flex.bar,
+.d-flex.quick-filter-bar {
+  display: none !important;
+}
+
