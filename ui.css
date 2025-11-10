@@ -96,3 +96,15 @@ body:has(#tb_opportunities-tab.router-link-active) .pipeline-ribbon {
   display: none !important;
 }
 
+
+/* ---- Hide all Social Planner platform buttons except Facebook + Instagram ---- */
+#sp-pg-landing-platform-threads,
+#sp-pg-landing-platform-google,
+#sp-pg-landing-platform-linkedin,
+#sp-pg-landing-platform-tiktok,
+#sp-pg-landing-platform-youtube,
+#sp-pg-landing-platform-pinterest,
+#sp-pg-landing-platform-community,
+#sp-pg-landing-platform-bluesky {
+    display: none !important;
+}
