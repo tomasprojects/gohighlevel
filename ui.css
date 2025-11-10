@@ -178,3 +178,11 @@ img[alt="initialisedPlanner.socialPlannerIllustration"] {
   white-space: normal !important;
 }
 
+/* Hide Business, Tasks, Custom Fields tabs */
+#tb_business,
+#tb_contacts-settings-top,
+#tb_tasks,
+#tb_contact-custom-fields-settings {
+  display: none !important;
+}
+
