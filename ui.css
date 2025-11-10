@@ -112,3 +112,26 @@ body:has(#tb_opportunities-tab.router-link-active) .pipeline-ribbon {
 .features-section {
   display: none !important;
 }
+
+/* --- Replace Social Planner Hero Image --- */
+
+/* Paslepiame originalų paveikslą */
+img.hero-illustration,
+img[alt="initialisedPlanner.socialPlannerIllustration"] {
+  display: none !important;
+}
+
+/* Rodome tavo paveikslą vietoje seno */
+.flex.order-1.justify-center.items-center.lg\:order-2::before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: 500px; /* gali koreguoti */
+  margin: 0 auto;
+  background-image: url("https://i.postimg.cc/qM9rH0ZT/Title-2025-11-10T153322-348.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
