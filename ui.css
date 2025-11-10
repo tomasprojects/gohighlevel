@@ -135,3 +135,46 @@ img[alt="initialisedPlanner.socialPlannerIllustration"] {
   background-position: center;
 }
 
+/* ===== Replace main Social Planner heading ===== */
+[data-v-1d728c3f].header-title,
+.header-title {
+  visibility: hidden !important;
+  position: relative !important;
+}
+
+[data-v-1d728c3f].header-title::after,
+.header-title::after {
+  content: "Automatically Share Your Best Reviews on Social Media";
+  visibility: visible !important;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  color: #1f2937 !important; /* neutral-800 */
+  white-space: normal;
+}
+
+
+/* ===== Replace sub-heading below ===== */
+[data-v-e017760c],
+[data-v-e017760c].text-gray-700 {
+  visibility: hidden !important;
+  position: relative !important;
+}
+
+/* ===== Sub-text replacement & sizing fix ===== */
+[data-v-e017760c]::after {
+  content: "Automatically share your best customer reviews!";
+  visibility: visible !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #4b5563 !important; /* neat neutral gray */
+  font-size: 1rem !important;
+  line-height: 1.45 !important;
+  max-width: 450px !important;
+  white-space: normal !important;
+}
+
