@@ -85,3 +85,14 @@ body:has(#tb_opportunities-tab.router-link-active) .pipeline-ribbon {
   display: none !important;
 }
 
+/* Hide Marketing top tabs */
+#tb_email-builder,
+#tb_email-templates,
+#tb_countdown-timer,
+#tb_trigger-links,
+#tb_affiliate-manager,
+#tb_brand-boards,
+#tb_ad-manager-home {
+  display: none !important;
+}
+
