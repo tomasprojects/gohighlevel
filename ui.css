@@ -108,3 +108,7 @@ body:has(#tb_opportunities-tab.router-link-active) .pipeline-ribbon {
 #sp-pg-landing-platform-bluesky {
     display: none !important;
 }
+
+.features-section {
+  display: none !important;
+}
