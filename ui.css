@@ -186,3 +186,59 @@ img[alt="initialisedPlanner.socialPlannerIllustration"] {
   display: none !important;
 }
 
+/* --- Contacts > Smart Lists > Bulk Actions: pataisa --- */
+
+/* 1) Pirmiausia atstatom, kad visi bulk mygtukai būtų matomi */
+.bulk-actions-list button,
+.bulk-actions-list [type="button"] {
+  display: inline-flex !important;
+}
+
+/* 2) DABAR paslepiam tik tuos, kurių nenori */
+
+/* Pipeline Change */
+[data-placement="top"][title*="Pipeline Change"] button,
+button[data-original-title*="Pipeline Change"] {
+  display: none !important;
+}
+
+/* Add to Automation */
+[data-placement="top"][title*="add automation"] button,
+button[data-original-title="Add to Automation"] {
+  display: none !important;
+}
+
+/* Bulk SMS */
+[data-placement="top"][title*="freeTrialOrSandbox"] button,
+button[data-original-title*="Bulk SMS"] {
+  display: none !important;
+}
+
+/* Send Email (bulk email) */
+[data-placement="top"][title*="send email"] button,
+button[data-original-title*="Send Email"] {
+  display: none !important;
+}
+
+/* Bulk WhatsApp */
+[data-placement="top"][title*="Bulk WhatsApp"] button,
+button[data-original-title*="Bulk WhatsApp"] {
+  display: none !important;
+}
+
+/* Merge up to 10 Contacts */
+[data-placement="top"][title*="Merge up to"] button,
+button[data-original-title*="Merge up to 10 Contacts"] {
+  display: none !important;
+}
+
+/* Add/Edit to Company (jei ir šitą nori slėpti) */
+[data-placement="top"][title*="Add/Edit to Company"] button {
+  display: none !important;
+}
+
+/* Hide "Pipeline Change" (aka "Pipeline Modal") button in Bulk Actions */
+.bulk-actions-list button[aria-label="Pipeline Change"],
+.bulk-actions-list button[data-original-title="Pipeline Modal"] {
+  display: none !important;
+}
