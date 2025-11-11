@@ -242,3 +242,32 @@ button[data-original-title*="Merge up to 10 Contacts"] {
 .bulk-actions-list button[data-original-title="Pipeline Modal"] {
   display: none !important;
 }
+
+/* Hide Business Services section items in Settings */
+#sb_,
+#sb_calendars,
+#sb_conversation_ai_settings_v2,
+#sb_knowledge-base-settings,
+#sb_ai_agent_settings,
+#sb_location-email-services,
+#sb_custom-fields-settings,
+#sb_custom-values,
+#sb_domains-urlRedirects,
+#sb_external-tracking,
+#sb_tags,
+#sb_my-staff,
+#tb_facebook-form-fields-mapping,
+#tb_tiktok-form-fields-mapping,
+#tb_linkedin-form-fields-mapping,
+#sb_audit-logs-location,
+#sb_phone-system {
+  display: none !important;
+}
+
+/* Hide category divider headings in Settings */
+.divider,
+div.divider,
+.w-full.group.divider,
+.w-full.group.px-3.flex.items-center.cursor-text.divider {
+  display: none !important;
+}
