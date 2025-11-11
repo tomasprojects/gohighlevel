@@ -272,3 +272,14 @@ div.divider,
 .w-full.group.px-3.flex.items-center.cursor-text.divider {
   display: none !important;
 }
+
+
+/* Hide the "Reputation Integrations" tab */
+[data-name="reputationIntegrations"] {
+    display: none !important;
+}
+
+/* Hide WhatsApp Review Request Tab */
+[data-name="reviewRequestWhatsApp"] {
+    display: none !important;
+}
