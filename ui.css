@@ -259,6 +259,7 @@ button[data-original-title*="Merge up to 10 Contacts"] {
 #tb_facebook-form-fields-mapping,
 #tb_tiktok-form-fields-mapping,
 #tb_linkedin-form-fields-mapping,
+#quickActions,
 #sb_audit-logs-location,
 #sb_phone-system {
   display: none !important;
